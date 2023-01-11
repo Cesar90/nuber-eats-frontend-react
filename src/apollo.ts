@@ -17,7 +17,7 @@ export const authTokenVar = makeVar(token);
 const wsLink = new WebSocketLink({
   uri:
     process.env.NODE_ENV === "production"
-      ? "wss://web-production-a238.up.railway.app/graphql"
+      ? "wss://nuber-eats-backend-nestjs-production.up.railway.app/graphql"
       : `ws://localhost:4000/graphql`,
   options: {
     reconnect: true,
@@ -30,7 +30,7 @@ const wsLink = new WebSocketLink({
 const httpLink = createHttpLink({
   uri:
     process.env.NODE_ENV === "production"
-      ? "https://web-production-a238.up.railway.app/graphql"
+      ? "https://nuber-eats-backend-nestjs-production.up.railway.app/graphql"
       : "http://localhost:4000/graphql",
 });
 
